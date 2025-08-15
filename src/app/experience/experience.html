@@ -1,0 +1,58 @@
+<div class="experience-container mat-app-background" [@fadeIn]>
+    <mat-card class="experience-wrapper-card" [@slideInRight]>
+      <mat-card-header>
+        <mat-card-title class="mat-display-2">Experience</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="experienceList && experienceList.length === 0" class="no-experience-message">
+          <p class="mat-body-1">No professional experience to display yet.</p>
+        </div>
+  
+        <div *ngFor="let job of experienceList; let i = index" class="job-entry">
+          <mat-card class="job-card" [@jobFadeIn]="i">
+            <mat-card-header>
+              <mat-card-title class="mat-h2">{{ job.title }} at {{ job.company }}</mat-card-title>
+              <mat-card-subtitle class="mat-body-1">{{ job.location }}</mat-card-subtitle>
+              <mat-card-subtitle class="mat-body-2">{{ job.startDate }} – {{ job.endDate || 'Present' }} ({{ getDuration(job.startDate, job.endDate) }})</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div *ngIf="job.description" class="description">
+                <p class="mat-body-1">{{ job.description }}</p>
+              </div>
+  
+              <div *ngIf="job.responsibilities && job.responsibilities.length > 0">
+                <h4 class="mat-h4">Key Responsibilities & Achievements:</h4>
+                <ul>
+                  <li *ngFor="let responsibility of job.responsibilities" class="mat-body-1">{{ responsibility }}</li>
+                </ul>
+              </div>
+  
+              <div *ngIf="job.technologiesUsed && job.technologiesUsed.length > 0">
+                <h4 class="mat-h4">Technologies Used:</h4>
+                <mat-chip-listbox aria-label="Technologies Used">
+                  <mat-chip-row *ngFor="let tech of job.technologiesUsed" color="primary" highlighted>
+                    {{ tech }}
+                  </mat-chip-row>
+                </mat-chip-listbox>
+              </div>
+  
+              <div *ngIf="job.clients && job.clients.length > 0">
+                <h4 class="mat-h4">Key Clients:</h4>
+                <ul>
+                  <li *ngFor="let client of job.clients" class="mat-body-1">{{ client }}</li>
+                </ul>
+              </div>
+  
+              <div *ngIf="job.awards && job.awards.length > 0">
+                <h4 class="mat-h4">Awards & Recognition:</h4>
+                <ul>
+                  <li *ngFor="let award of job.awards" class="mat-body-1">{{ award }}</li>
+                </ul>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

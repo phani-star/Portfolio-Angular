@@ -1,0 +1,66 @@
+.cover-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--mat-background-color); /* Uses the theme's background color */
+    color: var(--mat-on-background-color); /* Uses the theme's text color */
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .profile-card {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--mat-surface-color); /* Uses the theme's surface color */
+  }
+  
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    border: 4px solid var(--mat-primary-color); /* Uses the theme's primary color */
+    object-fit: cover;
+    object-position: top center;
+  }
+  
+  .mat-display-3 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--mat-on-surface-color); /* Uses the theme's text color on surfaces */
+  }
+  
+  .mat-h2 {
+    color: var(--mat-on-surface-variant-color); /* Uses a lighter text color for subtitles */
+  }
+  
+  .mat-body-1 {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: var(--mat-on-surface-color);
+  }
+  
+  .contact-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact-info mat-icon {
+    color: var(--mat-primary-color);
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+    color: var(--mat-primary-color);
+    font-weight: 500;
+  }
+  

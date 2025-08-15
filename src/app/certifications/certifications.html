@@ -1,0 +1,53 @@
+<div class="certifications-container mat-app-background" [@fadeIn]>
+    <mat-card class="certifications-wrapper-card" [@slideInLeft]>
+      <mat-card-header>
+        <mat-card-title class="mat-display-2">Certifications</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="certifications && certifications.length === 0" class="no-certifications-message">
+          <p class="mat-body-1">No certifications to display yet.</p>
+        </div>
+  
+        <div *ngIf="certifications && certifications.length > 0" class="carousel-container">
+          <button mat-icon-button (click)="prevSlide()" class="carousel-arrow left-arrow" [disabled]="currentSlideIndex === 0">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+  
+          <div class="carousel-slides" #carouselSlides>
+            <div *ngFor="let certificate of certifications; let i = index" 
+                 class="carousel-slide" 
+                 [class.active]="i === currentSlideIndex" 
+                 [@slideAnimation]="i === currentSlideIndex ? 'active' : 'inactive'"
+                 >
+              <mat-card class="certificate-card mat-elevation-z4">
+                <img [src]="certificate.imageUrl" alt="{{ certificate.name }}" class="certificate-image">
+                <mat-card-content>
+                  <h3 class="mat-h3">{{ certificate.name }}</h3>
+                  <p class="mat-body-1">{{ certificate.issuer }}</p>
+                  <p class="mat-body-2">{{ certificate.dateIssued }}</p>
+                </mat-card-content>
+                <mat-card-actions *ngIf="certificate.credentialUrl && i === currentSlideIndex">
+                  <a mat-button color="primary" [href]="certificate.credentialUrl" target="_blank">
+                    <mat-icon>verified</mat-icon> View Credential
+                  </a>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+  
+          <button mat-icon-button (click)="nextSlide()" class="carousel-arrow right-arrow" [disabled]="currentSlideIndex === certifications.length - 1">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+  
+          <div class="carousel-indicators">
+            <span *ngFor="let certificate of certifications; let i = index" 
+                  class="indicator" 
+                  [class.active]="i === currentSlideIndex"
+                  (click)="goToSlide(i)">
+            </span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

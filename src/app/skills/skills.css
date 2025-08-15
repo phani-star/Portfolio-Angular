@@ -1,0 +1,61 @@
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: var(--mat-background-color);
+    color: var(--mat-on-background-color);
+    box-sizing: border-box;
+  }
+  
+  .skills-card {
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--mat-surface-color);
+    color: var(--mat-on-surface-color);
+  }
+  
+  .mat-display-2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--mat-primary-color);
+  }
+  
+  .mat-h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--mat-on-surface-variant-color);
+    font-weight: 600;
+  }
+  
+  mat-chip-listbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Spacing between chips */
+    margin-bottom: 20px; /* Space between chip lists */
+  }
+  
+  mat-chip-row {
+    font-weight: 500;
+    /* Colors are set by the `color` attribute in the HTML for each chip-row */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .skills-container {
+      padding: 20px;
+    }
+  
+    .skills-card {
+      padding: 20px;
+    }
+  
+    .mat-display-2 {
+      font-size: 2.5em;
+    }
+  }
+  

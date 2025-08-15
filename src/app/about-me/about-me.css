@@ -1,0 +1,82 @@
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: var(--mat-background-color);
+    color: var(--mat-on-background-color);
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+  }
+  
+  .about-card {
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--mat-surface-color);
+    color: var(--mat-on-surface-color);
+  }
+  
+  .mat-display-2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--mat-primary-color); /* Uses the primary color from your theme */
+  }
+  
+  .bio {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .mat-h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--mat-on-surface-variant-color); /* A slightly less prominent text color */
+    font-weight: 600;
+  }
+  
+  mat-chip-listbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between chips */
+    margin-bottom: 30px;
+  }
+  
+  mat-chip-row {
+    font-weight: 500;
+    background-color: var(--mat-primary-container-color); /* Lighter shade of the primary color for chips */
+    color: var(--mat-on-primary-container-color); /* Text color for the chip */
+  }
+  
+  .resume-link {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .resume-link button {
+    padding: 10px 25px;
+    font-size: 1.1em;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about-me-container {
+      padding: 20px;
+    }
+  
+    .about-card {
+      padding: 20px;
+    }
+  
+    .mat-display-2 {
+      font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+  
+    .bio {
+      font-size: 1em;
+    }
+  }
+  

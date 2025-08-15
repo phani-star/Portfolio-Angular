@@ -1,0 +1,54 @@
+<div class="skills-container mat-app-background" [@fadeIn]>
+    <mat-card class="skills-card" [@slideInLeft]>
+      <mat-card-header>
+        <mat-card-title class="mat-display-2">My Skills</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="skills.programmingLanguages.length > 0">
+          <h3 class="mat-h3">Programming Languages</h3>
+          <mat-chip-listbox aria-label="Programming Languages">
+            <mat-chip-row *ngFor="let skill of skills.programmingLanguages" color="primary" highlighted>
+              {{ skill }}
+            </mat-chip-row>
+          </mat-chip-listbox>
+        </div>
+  
+        <div *ngIf="skills.frameworksLibraries.length > 0">
+          <h3 class="mat-h3">Frameworks & Libraries</h3>
+          <mat-chip-listbox aria-label="Frameworks and Libraries">
+            <mat-chip-row *ngFor="let skill of skills.frameworksLibraries" color="accent" highlighted>
+              {{ skill }}
+            </mat-chip-row>
+          </mat-chip-listbox>
+        </div>
+  
+        <div *ngIf="skills.toolsPlatforms.length > 0">
+          <h3 class="mat-h3">Tools & Platforms</h3>
+          <mat-chip-listbox aria-label="Tools and Platforms">
+            <mat-chip-row *ngFor="let skill of skills.toolsPlatforms" color="warn" highlighted>
+              {{ skill }}
+            </mat-chip-row>
+          </mat-chip-listbox>
+        </div>
+  
+        <div *ngIf="skills.databases.length > 0">
+          <h3 class="mat-h3">Databases</h3>
+          <mat-chip-listbox aria-label="Databases">
+            <mat-chip-row *ngFor="let skill of skills.databases" color="primary" highlighted>
+              {{ skill }}
+            </mat-chip-row>
+          </mat-chip-listbox>
+        </div>
+  
+        <div *ngIf="skills.softSkills.length > 0">
+          <h3 class="mat-h3">Soft Skills</h3>
+          <mat-chip-listbox aria-label="Soft Skills">
+            <mat-chip-row *ngFor="let skill of skills.softSkills" color="accent" highlighted>
+              {{ skill }}
+            </mat-chip-row>
+          </mat-chip-listbox>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

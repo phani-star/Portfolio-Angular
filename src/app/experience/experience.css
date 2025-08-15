@@ -1,0 +1,118 @@
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: var(--mat-background-color);
+    color: var(--mat-on-background-color);
+    box-sizing: border-box;
+  }
+  
+  .experience-wrapper-card {
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--mat-surface-color);
+    color: var(--mat-on-surface-color);
+  }
+  
+  .mat-display-2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--mat-primary-color);
+    text-align: center;
+  }
+  
+  .no-experience-message {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--mat-on-surface-variant-color);
+  }
+  
+  .job-entry {
+    margin-bottom: 30px; /* Space between job entries */
+  }
+  
+  .job-card {
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--mat-surface-variant-color);
+    color: var(--mat-on-surface-variant-color);
+  }
+  
+  .job-card .mat-h2 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--mat-primary-color);
+  }
+  
+  .job-card .mat-body-1 {
+    margin-bottom: 5px;
+  }
+  
+  .job-card .mat-body-2 {
+    color: var(--mat-on-surface-variant-color); /* Lighter color for dates and location */
+    font-size: 0.9em;
+  }
+  
+  .job-card .mat-h4 {
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--mat-secondary-color);
+  }
+  
+  .description {
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  .job-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  .job-card ul li {
+    margin-bottom: 5px;
+    line-height: 1.6;
+  }
+  
+  mat-chip-listbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  mat-chip-row {
+    font-weight: 500;
+    background-color: var(--mat-primary-container-color);
+    color: var(--mat-on-primary-container-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .experience-container {
+      padding: 20px;
+    }
+  
+    .experience-wrapper-card {
+      padding: 20px;
+    }
+  
+    .mat-display-2 {
+      font-size: 2.5em;
+    }
+  
+    .job-card {
+      padding: 15px;
+    }
+  }
+  

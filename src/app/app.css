@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden; /* Prevent body scroll, let mat-sidenav-container handle it */
+}
+
+/* Styles for the Sidenav Container */
+.sidenav-container {
+  height: 100%;
+}
+
+/* Styles for the Toolbar */
+mat-toolbar {
+  height: 64px; /* Standard toolbar height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 100; /* Ensure toolbar is above other content */
+}
+
+.app-title {
+  font-size: 1.5rem; /* Adjust as needed */
+  font-weight: 500;
+  color: var(--mat-toolbar-text-color); /* Uses theme's text color for toolbar */
+}
+
+.spacer {
+  flex: 1 auto; /* Pushes content to the right */
+}
+
+.main-nav-desktop a {
+  color: var(--mat-toolbar-text-color); /* Ensure link color is readable on primary toolbar */
+  margin: 0 10px; /* Space between links */
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.main-nav-desktop a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.main-nav-desktop a.active-link {
+  background-color: rgba(255, 255, 255, 0.2); /* Highlight active link */
+}
+
+/* Styles for Sidenav */
+mat-sidenav {
+  width: 250px; /* Width of the side navigation */
+  background-color: var(--mat-sidenav-background-color); /* Adjust if you need a different color */
+  padding-top: 10px; /* Space from the top */
+}
+
+mat-sidenav mat-nav-list a {
+  color: var(--mat-sidenav-text-color); /* Text color for sidenav links */
+  padding: 10px 20px;
+  font-size: 1.05em;
+}
+
+mat-sidenav mat-nav-list a:hover,
+mat-sidenav mat-nav-list a.active-link {
+  background-color: var(--mat-sidenav-active-background-color); /* Highlight active/hovered link */
+  color: var(--mat-sidenav-active-text-color); /* Active text color */
+}
+
+/* Hide the toggle button on desktop and show desktop nav links */
+.sidenav-toggle {
+  display: none; /* Hidden by default on desktop */
+}
+
+.main-nav-desktop {
+  display: flex; /* Show desktop navigation by default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidenav-toggle {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  .main-nav-desktop {
+    display: none; /* Hide desktop navigation on small screens */
+  }
+
+  .app-title {
+    margin-left: 10px; /* Space the title from the hamburger menu */
+  }
+}
+
+/* General styles for main content area */
+main {
+  padding: 20px; /* Padding for the main content */
+  box-sizing: border-box;
+}
+
+/* Ensure components themselves respect padding for better layout inside main */
+/* You might want to add this to your global styles or individual component styles */
+.mat-app-background {
+  padding: 0; /* Components already have their own padding */
+}

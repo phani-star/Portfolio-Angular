@@ -1,0 +1,29 @@
+<div class="about-me-container mat-app-background" [@fadeIn]>
+    <mat-card class="about-card" [@slideInRight]>
+      <mat-card-header>
+        <mat-card-title class="mat-display-2">About Me</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="mat-body-1 bio">{{ aboutMe.bio }}</p>
+  
+        <h3 class="mat-h3">Career Goals & Philosophy</h3>
+        <p class="mat-body-1">{{ aboutMe.goals }}</p>
+  
+        <h3 class="mat-h3">Key Strengths & Expertise</h3>
+        <!-- Using Angular Material chips for displaying skills -->
+        <mat-chip-listbox aria-label="Skills selection">
+          <mat-chip-row *ngFor="let skill of aboutMe.strengths" color="primary" highlighted>
+            {{ skill }}
+          </mat-chip-row>
+        </mat-chip-listbox>
+  
+        <!-- Optional: Downloadable resume link -->
+        <div *ngIf="aboutMe.resumeLink" class="resume-link">
+          <button mat-raised-button color="accent" (click)="downloadResume()">
+            <mat-icon>cloud_download</mat-icon> Download Resume
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

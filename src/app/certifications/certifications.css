@@ -1,0 +1,183 @@
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: var(--mat-background-color);
+    color: var(--mat-on-background-color);
+    box-sizing: border-box;
+  }
+  
+  .certifications-wrapper-card {
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--mat-surface-color);
+    color: var(--mat-on-surface-color);
+    text-align: center; /* Center the title */
+  }
+  
+  .mat-display-2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--mat-primary-color);
+  }
+  
+  .no-certifications-message {
+    padding: 50px 0;
+    color: var(--mat-on-surface-variant-color);
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden; /* Hide overflowing slides */
+  }
+  
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+    width: 100%;
+    /* To ensure only one slide is visible at a time, we will control transform in TS */
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    min-width: 100%; /* Ensure it always takes 100% width */
+    box-sizing: border-box;
+    padding: 0 20px; /* Space around the card within the slide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    position: absolute; /* Position slides on top of each other initially */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-slide.active {
+    position: relative; /* Make active slide appear in flow */
+    opacity: 1;
+  }
+  
+  
+  .certificate-card {
+    width: 100%;
+    max-width: 600px; /* Max width for certificate images */
+    border-radius: 10px;
+    background-color: var(--mat-surface-variant-color);
+    color: var(--mat-on-surface-variant-color);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .certificate-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit height of certificate images */
+    object-fit: contain; /* Ensure entire image is visible */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid var(--mat-divider-color);
+  }
+  
+  .certificate-card .mat-h3 {
+    font-weight: 600;
+    color: var(--mat-primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .certificate-card .mat-body-1 {
+    font-size: 1.05em;
+    color: var(--mat-on-surface-variant-color);
+    margin-bottom: 3px;
+  }
+  
+  .certificate-card .mat-body-2 {
+    font-size: 0.9em;
+    color: var(--mat-on-surface-variant-color);
+  }
+  
+  .mat-card-actions {
+    margin-top: 15px;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    z-index: 10; /* Ensure arrows are above slides */
+  }
+  
+  .carousel-arrow.left-arrow {
+    left: 10px;
+  }
+  
+  .carousel-arrow.right-arrow {
+    right: 10px;
+  }
+  
+  .carousel-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: var(--mat-primary-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .certifications-container {
+      padding: 20px;
+    }
+  
+    .certifications-wrapper-card {
+      padding: 20px;
+    }
+  
+    .mat-display-2 {
+      font-size: 2.5em;
+    }
+  
+    .certificate-card {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .carousel-arrow {
+      background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on small screens */
+    }
+  }
+  

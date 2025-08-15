@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" [fixedInViewport]="true" fixedTopGap="0">
+    <mat-nav-list>
+  <a mat-list-item routerLink="/cover" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()">Home</a>
+  <a mat-list-item routerLink="/about" routerLinkActive="active-link" (click)="sidenav.close()">About</a>
+  <a mat-list-item routerLink="/skills" routerLinkActive="active-link" (click)="sidenav.close()">Skills</a>
+  <a mat-list-item routerLink="/projects" routerLinkActive="active-link" (click)="sidenav.close()">Projects</a>
+  <a mat-list-item routerLink="/education" routerLinkActive="active-link" (click)="sidenav.close()">Education</a>
+  <a mat-list-item routerLink="/experience" routerLinkActive="active-link" (click)="sidenav.close()">Experience</a>
+  <a mat-list-item routerLink="/certifications" routerLinkActive="active-link" (click)="sidenav.close()">Certifications</a>
+  <a mat-list-item routerLink="/contact" routerLinkActive="active-link" (click)="sidenav.close()">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="sidenav-toggle" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="app-title">My Portfolio</span>
+      <span class="spacer"></span> <!-- This pushes the nav links to the right -->
+      <nav class="main-nav-desktop">
+  <a mat-button routerLink="/cover" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a mat-button routerLink="/about" routerLinkActive="active-link">About</a>
+  <a mat-button routerLink="/skills" routerLinkActive="active-link">Skills</a>
+  <a mat-button routerLink="/projects" routerLinkActive="active-link">Projects</a>
+  <a mat-button routerLink="/education" routerLinkActive="active-link">Education</a>
+  <a mat-button routerLink="/experience" routerLinkActive="active-link">Experience</a>
+  <a mat-button routerLink="/certifications" routerLinkActive="active-link">Certifications</a>
+  <a mat-button routerLink="/contact" routerLinkActive="active-link">Contact</a>
+      </nav>
+    </mat-toolbar>
+
+    <main>
+      <router-outlet></router-outlet> <!-- This is where routed components will be displayed -->
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

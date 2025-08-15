@@ -1,0 +1,52 @@
+<div class="education-container mat-app-background" [@fadeIn]>
+    <mat-card class="education-wrapper-card" [@slideInLeft]>
+      <mat-card-header>
+        <mat-card-title class="mat-display-2">Education</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="educationList && educationList.length === 0" class="no-education-message">
+          <p class="mat-body-1">No educational details to display yet.</p>
+        </div>
+  
+        <div *ngFor="let edu of educationList; let i = index" class="education-entry">
+          <mat-card class="education-card" [@educationFadeIn]="i">
+            <mat-card-header>
+              <mat-card-title class="mat-h2">{{ edu.degree }}</mat-card-title>
+              <mat-card-subtitle class="mat-body-1">{{ edu.institution }} - {{ edu.location }}</mat-card-subtitle>
+              <mat-card-subtitle class="mat-body-2">{{ edu.startDate }} – {{ edu.endDate || 'Present' }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div *ngIf="edu.gpa" class="gpa">
+                <span class="mat-h4">GPA:</span> <span class="mat-body-1">{{ edu.gpa }}</span>
+              </div>
+              <div *ngIf="edu.honors && edu.honors.length > 0">
+                <h4 class="mat-h4">Honors & Awards:</h4>
+                <ul class="honors-list">
+                  <li *ngFor="let honor of edu.honors" class="mat-body-1">{{ honor }}</li>
+                </ul>
+              </div>
+              <div *ngIf="edu.relevantCoursework && edu.relevantCoursework.length > 0">
+                <h4 class="mat-h4">Relevant Coursework:</h4>
+                <mat-list>
+                  <mat-list-item *ngFor="let course of edu.relevantCoursework">
+                    <mat-icon matListItemIcon>school</mat-icon>
+                    <div matListItemTitle>{{ course }}</div>
+                  </mat-list-item>
+                </mat-list>
+              </div>
+              <div *ngIf="edu.projects && edu.projects.length > 0">
+                <h4 class="mat-h4">Projects:</h4>
+                <mat-list>
+                  <mat-list-item *ngFor="let project of edu.projects">
+                    <mat-icon matListItemIcon>assignment</mat-icon>
+                    <div matListItemTitle>{{ project }}</div>
+                  </mat-list-item>
+                </mat-list>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
