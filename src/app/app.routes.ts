@@ -12,7 +12,7 @@ import { Contact } from './contact/contact'; // Import the Contact component
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'cover', pathMatch: 'full' }, // Redirect to 'cover' by default
+  { path: '', component: CoverPage }, // Render CoverPage at root for index.html
   { path: 'cover', component: CoverPage },
   { path: 'about', component: AboutMe },
   { path: 'skills', component: Skills },
@@ -21,5 +21,5 @@ export const routes: Routes = [
   { path: 'experience', component: Experience },
   { path: 'certifications', component: Certifications },
   { path: 'contact', component: Contact },
-  { path: '**', redirectTo: 'cover' } // Redirect to 'cover' for any unmatched routes
+  { path: '**', component: CoverPage } // Render CoverPage for any unmatched routes
 ];
