@@ -5,8 +5,7 @@ import { CommonModule } from '@angular/common'; // Important for standalone comp
 // Angular Material Imports
 import { MatCardModule } from '@angular/material/card'; // For <mat-card>
 import { MatButtonModule } from '@angular/material/button'; // For <a mat-button>
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon'; // For <mat-icon> and registry
-import { DomSanitizer } from '@angular/platform-browser'; // For SVG icon registration
+import { MatIconModule } from '@angular/material/icon'; // For <mat-icon>
 
 
 // Import your local portfolio data
@@ -53,20 +52,7 @@ export class CoverPage {
   contact = PORTFOLIO_DATA.coverPage.contact;
   profilePictureUrl = PORTFOLIO_DATA.coverPage.profilePictureUrl;
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
-    this.matIconRegistry.addSvgIcon(
-      'linkedin',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg')
-    );
-    this.matIconRegistry.addSvgIcon(
-      'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg')
-    );
-    this.matIconRegistry.addSvgIcon(
-      'scaler',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/scaler.svg')
-    );
-  }
+  // No custom icon registration needed; use built-in Material icons only
 
   // Optional: Add methods if needed
   downloadResume() {
