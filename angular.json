@@ -19,16 +19,12 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
+              }
+              ,
               {
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets/icons",
-                "output": "assets/icons"
               }
             ],
             "styles": [
