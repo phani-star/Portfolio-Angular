@@ -36,7 +36,7 @@ export const PORTFOLIO_DATA = {
         ],
         demoLink: 'https://demo.hotelbooking.com',
         githubRepo: 'https://github.com/phani-star/HotelReservationBackendRepo',
-        role: 'Backend Developer',
+        role: 'Full-stack Developer',
         contributions: [
           'Developed reusable backend services for room management and booking.',
           'Optimized database queries, improving response time.',
@@ -57,7 +57,7 @@ export const PORTFOLIO_DATA = {
           'assets/images/projects/portfolio-creator-editor.jpg'
         ],
         demoLink: 'https://portfolio-creator.app.io',
-        githubRepo: 'https://github.com/phani-star/portfolio',
+        githubRepo: 'https://github.com/phani-star/Portfolio-Angular',
         role: 'Full-stack Developer',
         contributions: [
           'Designed and implemented a responsive single-page portfolio using Angular.',
@@ -189,6 +189,20 @@ export const PORTFOLIO_DATA = {
         dateIssued: 'March 2024',
         imageUrl: 'assets/sql.png', // Path to your certificate image
         credentialUrl: 'https://drive.google.com/file/d/1_V98XVb4xBHfhjj3m5Y3OYHrTKoQm0Jl/view?usp=sharing' // Optional
+      },
+      {
+        name: 'AI Assisted Code Companion',
+        issuer: 'Cognizant',
+        dateIssued: 'January 2025',
+        imageUrl: 'assets/copilot.png', // Path to your certificate image
+        credentialUrl: 'https://drive.google.com/file/d/1cpi1eUOQE6WLrBAVGu8oBmSjdF51Wsc3/view?usp=sharing' // Optional
+      },
+      {
+        name: 'Site Reliability Engineering Essentials',
+        issuer: 'Cognizant',
+        dateIssued: 'January 2025',
+        imageUrl: 'assets/sre.png', // Path to your certificate image
+        credentialUrl: 'https://drive.google.com/file/d/1LvGOENM5KPTBwNEX2IH_Dr_dFOyRvvde/view?usp=sharing' // Optional
       }
       // Add more certificates as needed
     ],
