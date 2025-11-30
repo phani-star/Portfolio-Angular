@@ -1,7 +1,7 @@
 export const PORTFOLIO_DATA = {
     coverPage: {
       name: 'Nagaphani Gangadhara',
-      title: 'Jr.Software Engineer',
+      title: 'Software Engineer',
       tagline: 'Backend-first developer specializing in building scalable, high-performance systems. Experienced in Java, Spring Boot, and database design, with a passion for automation and leveraging AI-powered tools to deliver robust solutions. Dedicated to clean code, continuous learning, and collaborating across teams to drive innovation.',
       profilePictureUrl: 'assets/me.jpg', // Path to your profile picture
       contact: {
@@ -12,7 +12,7 @@ export const PORTFOLIO_DATA = {
       }
     },
     aboutMe: {
-      bio: "I'm a backend-focused Full Stack Developer with a strong foundation in Java, Spring Boot, and system architecture. I specialize in building scalable, secure, and high-performance backend systems, with hands-on experience in RESTful APIs, microservices, and database design. Currently working as a Jr.Software Engineer at Cognizant, I've contributed to enterprise-grade applications across domains like energy and travel, modernizing legacy systems and ensuring seamless deployments. I believe in writing clean, testable code and have consistently achieved high code coverage through JUnit and Mockito. While backend is my core strength, I use AI-assisted tools to streamline frontend development and deliver complete solutions. I'm passionate about solving real-world problems through logic, performance optimization, and smart integrations.Outside of work, I enjoy playing cricket and volleyball—activities that keep me energized, focused, and always ready for the next challenge.",
+      bio: "I'm a backend-focused Full Stack Developer with a strong foundation in Java, Spring Boot, and system architecture. I specialize in building scalable, secure, and high-performance backend systems, with hands-on experience in RESTful APIs, microservices, and database design. Currently working as a Software Engineer at Cognizant, I've contributed to enterprise-grade applications across domains like energy and travel, modernizing legacy systems and ensuring seamless deployments. I believe in writing clean, testable code and have consistently achieved high code coverage through JUnit and Mockito. While backend is my core strength, I use AI-assisted tools to streamline frontend development and deliver complete solutions. I'm passionate about solving real-world problems through logic, performance optimization, and smart integrations.Outside of work, I enjoy playing cricket and volleyball—activities that keep me energized, focused, and always ready for the next challenge.",
       goals: "My career goal is to continue growing as a full-stack developer, taking on challenging projects that allow me to contribute across the entire software development lifecycle. I am passionate about learning new technologies and leveraging them to solve real-world problems.",
       strengths: ["Java", "Spring Boot", "MySQL", "Problem Solving", "Angular"],
       resumeLink: "assets/Nagaphani_Resume.pdf" // Path to your resume PDF
@@ -93,15 +93,15 @@ export const PORTFOLIO_DATA = {
       {
         company: 'Cognizant',
         location: 'Hyderabad, Telangana',
-        title: 'Programmer Analyst',
-        startDate: 'March 2025',
+        title: 'Associate',
+        startDate: 'October 2025',
         endDate: 'Present',
         client: 'Tucson Electric Power',
         description: 'Collaborated on backend upgrades and codebase optimization for improved system performance , ensuring compatibility with the latest Spring standards and improving system reliability.',
         responsibilities: [
           'Migrated backend applications from Spring Framework 5 to Spring 6 and Spring Boot 2 to Spring Boot 3.5.',
           'Resolved deprecated code issues, compilation errors, and refactored logic for performance gains.',
-          'Implemented JUnit test cases with >80% code coverage and ensured CI/CD pipeline success via Jenkins.',
+          'Implemented JUnit test cases with over 80% code coverage and ensured CI/CD pipeline success via Jenkins.',
           'Validated application performance across environments through functional testing.',
           'Monitored real-time logs using Splunk to detect and troubleshoot issues.',
           'Handled incidents and service requests via ServiceNow, resolving customer queries efficiently.',
@@ -116,8 +116,8 @@ export const PORTFOLIO_DATA = {
         location: 'Bangalore, Karnataka',
         title: 'Programmer Analyst',
         startDate: 'March 2024',
-        endDate: 'February 2025',
-        client: 'Expedia',
+        endDate: 'September 2025',
+        client: 'Expedia, Tucson Electric Power',
         description: 'Focused on security, data validation, and manual testing for Expedia’s backend systems, ensuring data integrity and system stability.',
         responsibilities: [
           'Identified and resolved system vulnerabilities to enhance security.',

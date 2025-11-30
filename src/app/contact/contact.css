@@ -110,18 +110,24 @@
     }
   
     .contact-details mat-list-item {
-      flex-direction: column; /* Stack details vertically on smaller screens */
+      flex-direction: row; /* Keep icon and text inline to avoid cropping */
       align-items: center;
+      gap: 8px;
+      justify-content: flex-start;
+      padding: 8px 0;
     }
-  
-    .contact-details mat-list-item .mat-icon {
-      margin-right: 0;
-      margin-bottom: 5px;
-    }
-  
+
+    /* Ensure long text wraps and is fully visible */
+    .contact-details mat-list-item .mat-button,
     .contact-details mat-list-item [matListItemTitle] {
-      margin-right: 0;
-      margin-bottom: 5px;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .contact-details mat-list-item .mat-icon {
+      margin-right: 8px;
     }
   }
   

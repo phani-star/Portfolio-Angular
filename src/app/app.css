@@ -3,7 +3,6 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden; /* Prevent body scroll, let mat-sidenav-container handle it */
 }
 
 /* Styles for the Sidenav Container */
@@ -90,12 +89,20 @@ mat-sidenav mat-nav-list a.active-link {
   .app-title {
     margin-left: 10px; /* Space the title from the hamburger menu */
   }
+
+  /* Toolbar becomes denser on mobile */
+  mat-toolbar { height: 56px; padding: 0 8px; }
+  .app-title { font-size: 1.1rem; }
 }
 
 /* General styles for main content area */
 main {
   padding: 20px; /* Padding for the main content */
   box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  main { padding: 12px; }
 }
 
 /* Ensure components themselves respect padding for better layout inside main */

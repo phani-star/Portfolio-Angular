@@ -1,4 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Global resets */
+html, body { height: 100%; box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; -webkit-font-smoothing:antialiased; }
+
+/* Make images and media responsive by default */
+img, picture, video, canvas, svg { max-width: 100%; height: auto; display: block; }
+
+/* Reduce tap target jitter on mobile */
+a { -webkit-tap-highlight-color: transparent; }
+
+/* Mobile overrides: make layout fluid and reduce paddings for small screens */
+@media (max-width: 480px) {
+	/* Generic content containers used across components */
+	.content,
+	.section-content,
+	.profile-card,
+	.section-card,
+	.skills-card,
+	.projects-card,
+	.contact-card,
+	.cert-card {
+		max-width: 100% !important;
+		padding: 12px !important;
+		margin: 0 auto !important;
+	}
+
+	/* Make profile image smaller on phones */
+	.profile-image {
+		width: 96px !important;
+		height: 96px !important;
+	}
+
+	/* Tighter typography for small screens */
+	.mat-display-3 { font-size: 1.4rem !important; }
+	.mat-h2 { font-size: 1rem !important; }
+	.mat-body-1 { font-size: 0.95rem !important; }
+
+	/* Contact items wrap and reduce gap */
+	.contact-info { gap: 8px !important; justify-content: center !important; }
+
+	/* Projects grid collapse to single column if necessary */
+	.projects-grid { grid-template-columns: 1fr !important; }
+
+	/* Reduce toolbar height and padding on very small screens */
+	mat-toolbar { height: 56px !important; padding: 0 8px !important; }
+}

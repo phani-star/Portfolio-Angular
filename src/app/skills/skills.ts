@@ -43,4 +43,10 @@ export class Skills { // Renamed from Skills for clarity and convention
   constructor() {
     // Optional: Add any initialization logic here
   }
+
+  // Mark very long skill labels so CSS can make them full-width on small screens
+  isLong(skill: string): boolean {
+    if (!skill) return false;
+    return skill.length > 22; // threshold can be adjusted
+  }
 }

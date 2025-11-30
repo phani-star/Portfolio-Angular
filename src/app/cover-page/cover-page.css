@@ -9,20 +9,20 @@
   
   .content {
     text-align: center;
-    max-width: 800px;
+  max-width: 900px;
     width: 100%;
   }
   
   .profile-card {
-    padding: 40px;
+    padding: 32px;
     border-radius: 12px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     background-color: var(--mat-surface-color); /* Uses the theme's surface color */
   }
   
-.profile-image {
-    width: 180px;
-    height: 180px;
+  .profile-image {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     margin: 0 auto 24px;
     border: 4px solid var(--mat-primary-color); /* Uses the theme's primary color */
@@ -47,11 +47,12 @@
   }
   
   .contact-info {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
   }
   
   .contact-info mat-icon {
@@ -63,4 +64,17 @@
     color: var(--mat-primary-color);
     font-weight: 500;
   }
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .content { padding: 12px; }
+  .profile-card { padding: 18px; }
+  .profile-image { width: 110px; height: 110px; margin-bottom: 12px; }
+  /* Stack header elements and ensure title wraps */
+  mat-card-header { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .mat-display-3 { font-size: 1.2rem; word-break: break-word; overflow-wrap: anywhere; text-align: center; margin: 0; }
+  .mat-h2 { font-size: 1rem; }
+  .mat-body-1 { font-size: 0.95rem; }
+  .contact-info { gap: 8px; }
+}
   

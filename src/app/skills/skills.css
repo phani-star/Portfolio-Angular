@@ -43,6 +43,54 @@
     font-weight: 500;
     /* Colors are set by the `color` attribute in the HTML for each chip-row */
   }
+
+  /* Ensure chips and long strings break on small screens */
+  mat-chip-listbox, mat-chip-row, .skills-card {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Make chip content wrap and avoid overflowing the chip container */
+  mat-chip-row {
+    display: inline-flex;
+    align-items: center;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Target common material chip inner elements to ensure wrapping */
+  mat-chip-row .mat-chip, mat-chip-row .mat-mdc-chip, mat-chip-row span {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+/* Additional fixes for Angular Material chips (MDC & legacy) */
+.mat-chip, .mat-mdc-chip, mat-chip-row {
+  box-sizing: border-box;
+  min-width: 0; /* allow flex children to shrink */
+}
+
+/* MDC chip text selector for deeper encapsulation */
+.mat-mdc-chip .mdc-chip__text,
+.mat-chip .mat-chip-content,
+mat-chip-row span {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Stronger mobile rules: allow chips to occupy half width and wrap text */
+@media (max-width: 480px) {
+  mat-chip-listbox { gap: 6px; }
+  mat-chip-row { flex: 0 1 48% !important; max-width: 48% !important; }
+  /* If a chip still needs more room, allow it to take full width */
+  mat-chip-row.long { flex-basis: 100% !important; max-width: 100% !important; }
+}
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
@@ -55,7 +103,12 @@
     }
   
     .mat-display-2 {
-      font-size: 2.5em;
+      font-size: 2.0em;
     }
+    /* Slightly reduce chip font-size on small screens */
+    mat-chip-row { font-size: 0.9rem; }
+  /* Make chips more flexible on narrow screens */
+  mat-chip-listbox { gap: 6px; }
+  mat-chip-row { flex: 0 1 auto; max-width: 48%; }
   }
   
